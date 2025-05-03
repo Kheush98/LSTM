@@ -12,7 +12,6 @@ from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.callbacks import EarlyStopping
 
-# Paramètres
 MAX_WORDS = 10000
 MAX_LEN = 100
 MODEL_PATH = "spam_lstm_model.h5"
@@ -55,7 +54,7 @@ def get_or_train_model():
 model = get_or_train_model()
 
 # Interface Streamlit
-st.title("📩 Détection de SMS Spam avec LSTM")
+st.title("Détection de SMS Spam avec LSTM")
 st.markdown("Entrez un message texte pour vérifier s’il s’agit de spam ou non :")
 
 user_input = st.text_area("Message texte", "Congratulations! You've won a free ticket to Bahamas. Reply now!")
